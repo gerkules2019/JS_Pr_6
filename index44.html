@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            alert('Добрый день! Посчитаем дискриминант ( dis ) квадратного уравнения ( b * b - 4 * a * c )');
+
+            var a = prompt('Введите число a');
+            if (a == '' || a == ' '|| isNaN(a))
+            {
+                alert('Ошибка ввода!!! Введите число!');
+                exit;
+            }
+            var b = prompt('Введите число b');
+            if (b == '' || b == ' '|| isNaN(b))
+            {
+                alert('Ошибка ввода!!! Введите число!');
+                exit;
+            }
+            var c = prompt('Введите число с');
+            if (c == '' || c == ' '|| isNaN(c))
+            {
+                alert('Ошибка ввода!!! Введите число!');
+                exit;
+            }
+
+            function calcD(a, b, c)
+            {
+                if (Number.isNaN(parseInt(a)) == false && Number.isNaN(parseInt(b)) == false && Number.isNaN(parseInt(c)) == false) 
+                    return b * b - 4 * a * c;
+                else return 'Ошибка ввода!!! Попробуйте еще!!!';
+            }
+           
+            var dis = calcD(a, b, c);
+            if (isFinite(dis)) 
+                 alert('dis =' + dis);
+            else alert(dis);
+        </script>
+    </body>
+</html>
